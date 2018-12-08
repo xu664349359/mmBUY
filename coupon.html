@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <script src="./lib/flexible.js"></script>
+    <link rel="stylesheet" href="./css/coupon.css">
+</head>
+<body>
+    <div class="money_content">
+        <div class="header">
+            优惠券
+            <a href="#" class="fr"> <div class="header_right "></div></a>
+        </div>
+        <div class="main">
+            <ul class="clearfix">
+                <li>
+                    <a href="#">
+                        <img src=http://www.juanlaoda.com/ImageUpload/2013310191729944.jpg alt="">
+                        <p>肯德基</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="index_footer">
+            <div class="footer_center clearfix">
+                <div class="l1"><p>登录</p></div>
+                <div class="l2"><p>注册</p></div>
+                <div class="l3"><p> <i></i> 返回顶部</p></div>
+            </div>
+            <div class="footer_bottom">
+                <a href="#">手机APP下载</a><span>慢慢买手机版</span><span>--</span><span>掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+   <script type="text/html" id="coupon">
+    {{each result v i}}
+    <li>
+        <a href="{{v.couponLink}}?id={{v.couponId}}">
+            <img src={{v.couponImg}} alt="">
+            <p>{{v.couponTitle}}</p>
+        </a>
+    </li>
+    {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/coupon.js"></script>
+</body>
+</html>

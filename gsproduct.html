@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <script src="./lib/flexible.js"></script>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/gsproduct.css">
+</head>
+<body>
+    <div class="money_content">
+        <div class="header">
+           凑单品
+            <a href="#" class="fr"> <div class="header_right "></div></a>
+        </div>
+        <div class="main">
+           <div class="title">
+               <span class="fa fa-list"></span>
+               <ul>
+                   <li class="shop"><a href="#">京东</a><span class="fa fa-angle-up"></span>
+                    <ul id="shop">
+                        <li class="current">京东 <span class="fa fa-check "></span></li>
+                        <li>一号店<span class="fa fa-check"></span></li>
+                        <li>天猫商城<span class="fa fa-check"></span></li>
+                    </ul>
+                    </li>
+                   <li class="adress hidden-word-1"><a href="#">华北</a><span class="fa fa-angle-up"></span>
+                    <ul id="adress1">
+                        <li class="current">京东 <span class="fa fa-check "></span></li>
+                        <li>一号店<span class="fa fa-check"></span></li>
+                        <li>天猫商城<span class="fa fa-check"></span></li>
+                    </ul>
+                    </li>
+                   <li class=""><a href="#">全部价格</a><span class="fa fa-angle-up"></span></li>
+               </ul>
+               
+           </div>
+           <div class="content">
+                <ul>
+                    <li>
+                        <img src="http://d6.yihaodianimg.com/N07/M0A/6C/9E/CgQIz1XS7ZOAK8YGAAOYScgyGpI02701_230*230.jpg" alt="">
+                        <p class="des hidden-word-1">新雅 广式莲蓉月饼 100g/袋</p>
+                        <div class="price">
+                            <span>¥1.0</span>
+                            <a href="#">去凑单</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="index_footer">
+            <div class="footer_center clearfix">
+                <div class="l1"><p>登录</p></div>
+                <div class="l2"><p>注册</p></div>
+                <div class="l3"><p> <i></i> 返回顶部</p></div>
+            </div>
+            <div class="footer_bottom">
+                <a href="#">手机APP下载</a><span>慢慢买手机版</span><span>--</span><span>掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="shop1">
+        {{each result v i}}
+        <li data-shopId="{{v.shopId}}" class="{{ i === 0 ?'current':''}}">{{v.shopName}}<span class="fa fa-check"></span></li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="adress">
+        {{each result v i}}
+        <li class="{{ i === 0 ? 'current':''}}" data-areaId="{{v.areaId}}">{{v.areaName}}<span class="fa fa-check"></span></li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="content">
+        {{each result v i}}
+        <li>
+            <img src="{{v.productImg}}" alt="">
+            <p class="des hidden-word-1">{{v.productName}}</p>
+            <div class="price">
+                <span>{{v.productPrice}}</span>
+                <a href="#">去凑单</a>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/gsproduct.js"></script>
+</body>
+</html>

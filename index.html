@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <script src="./lib/flexible.js"></script>
+</head>
+<body>
+    <div class="mm_container">
+        <div class="header">
+            <div class="header_left fl"></div>
+           <a href="#" class="fr"> <div class="header_right "></div></a>
+        </div>
+        <div class="search">
+           <div class="search_contain">
+                <input type="text" placeholder="请输入你想比价的商品" class="fl">
+                <button class="fr">搜索</button>
+           </div>
+        </div>
+        <div class="index_nav">
+            <ul class="clearfix">
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+                 <li><a href="#"><img src="./images/ic_bcj.png" alt=""><p>白菜价</p></a> </li>
+            </ul>
+        </div>
+        <div class="recommend">
+            <div class="recommend_top">
+                <span class="fl animated">超级折扣推荐</span>
+                <div class="more fr"></div>
+            </div>
+            <div class="recommend_content">
+                <ul>
+                    <li>
+                    <a href="#">
+                        <div class="li_left">
+                        <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+
+                        </div>
+                        <div class="li_right fl">
+                            <p class="list_top">移动端凑单品：海天 鲜味 生抽 1.28L <span>10.9元</span></p>
+                            <div class="list_bottom">
+                                <p class="classify fl"><span>京东商城</span><span>|</span><span>10-25 14:10</span></p>
+                                <p class="num fr">1</p>
+                            </div>
+                        </div>
+                    </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="recommend_footer">
+                <button>更多优惠信息>></button>
+            </div>
+        </div>
+        <div class="index_footer">
+            <div class="footer_top">
+                <span>品牌排行</span>
+                <div class="footer_right"></div>
+            </div>
+            <div class="footer_center clearfix">
+                <div class="l1"><p>登录</p></div>
+                <div class="l2"><p>注册</p></div>
+                <div class="l3"><p> <i></i> 返回顶部</p></div>
+            </div>
+            <div class="footer_bottom">
+                <a href="#">手机APP下载</a><span>慢慢买手机版</span><span>--</span><span>掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="index_nav">
+        {{each result v i}}
+        <li><a href="{{v.titlehref}}.html" class="{{ v.indexmenuId === 7?'more':'' }}"><img src="./images/{{v.img}}" alt=""><p>{{v.name}}</p></a> </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="index_recommend">
+        {{each result v i}}
+        <li class="animated">
+            <a href="#">
+                <div class="li_left">
+                {{#v.productImg2}}
+                </div>
+                <div class="li_right fl">
+                    <p class="list_top">{{v.productName}}<span>{{v.productPinkage}}</span></p>
+                    <div class="list_bottom">
+                        <p class="classify fl"><span>{{v.productFrom}}</span><span>|</span><span>{{v.productTime}}</span></p>
+                        <p class="num fr">{{v.productComCount}}</p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <script src="./lib/flexible.js"></script>
+</head>
+<body>
+    <div class="mm_container">
+        <div class="header">
+            <div class="header_left fl"></div>
+           <a href="#" class="fr"> <div class="header_right "></div></a>
+        </div>
+        <div class="search">
+           <div class="search_contain">
+                <input type="text" placeholder="请输入你想比价的商品" class="fl">
+                <button class="fr">搜索</button>
+           </div>
+        </div>   
+        <div class="product">
+            <div class="title clearfix">
+                <div class="title_left">
+                    <a href="index.html">首页</a> <span class=" fa fa-angle-right"></span><a href="category.html">全部分类</a><span class="fa fa-angle-right"></span><a href="#">电视</a><span class="fa fa-angle-right"></span>
+                </div>
+                <button>筛选</button>
+            </div>
+            <ul class="father">
+                <li>
+                    <a href="#" class="clearfix">
+                        <div class="product_left">
+                                <img src="http://pro.zuyushop.com:8015/ProPic/20169/Thumb/Thumb_2016090009323065176.png" alt="苹果Apple iPhone7 Plus (A1661) 32G 玫瑰金色 全网通4G手机" width="100" height="100">
+                        </div>
+
+                        <div class="product_right fr">
+                            <p>苹果Apple iPhone7 Plus (A1661) 32G 玫瑰金色 全网通4G手机</p>
+                            <p> <span>￥</span>6388.00</p>
+                            
+                            <span>报价(7)</span>
+                            <span>评论(39)</span>
+                            
+                        </div>  
+                   
+                    </a>
+                </li>
+            </ul>
+            <div class="product_footer clearfix">
+                <a href="#" class="last">上一页</a>
+                <select>
+                    <option value="1">1/4</option>
+                    <option value="2">2/4</option>
+                    <option value="3">3/4</option>
+                    <option value="4">4/4</option>
+                </select>
+                <a href="#" class="next">下一页</a>
+            </div>
+        </div>
+       <div class="index_footer">
+            
+            <div class="footer_center clearfix">
+                <div class="l1"><p>登录</p></div>
+                <div class="l2"><p>注册</p></div>
+                <div class="l3"><p> <i></i> 返回顶部</p></div>
+            </div>
+            <div class="footer_bottom">
+                <a href="#">手机APP下载</a><span>慢慢买手机版</span><span>--</span><span>掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+   <script type="text/html" id="product_list">
+    {{each result v i}}
+    <li>
+        <a href="#" class="clearfix" data-id="{{v.productId}}" data-categoryId="{{v.categoryId}}"
+        data-brandName={{v.brandName}}>
+            <div class="product_left">
+                {{#v.productImg}}
+            </div>
+
+            <div class="product_right fr">
+                <p>{{v.productName}}</p>
+                <p>{{v.productPrice}}</p>
+                
+                <span>报价(7)</span>
+                <span>评论(39)</span>
+                
+            </div>  
+        
+        </a>
+    </li>
+    {{/each}}
+    </script>
+    <script type="text/html" id="product_title">
+        <a href="index.html">首页</a> <span class=" fa fa-angle-right"></span><a href="category.html">全部分类</a><span class="fa fa-angle-right"></span><a href="#">{{result[0].category}}</a><span class="fa fa-angle-right"></span>
+    </script>
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/product.js"></script>
+</body>
+</html>

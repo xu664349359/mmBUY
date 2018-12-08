@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <script src="./lib/flexible.js"></script>
+    <link rel="stylesheet" href="./css/inlanddiscount.css">
+</head>
+<body>
+    <div class="money_content">
+        <div class="header">
+            <p>国内折扣</p>
+            <a href="#" class="fr"> <div class="header_right "></div></a>
+        </div>
+        <div class="main">
+           <ul class="clearfix">
+               <li>
+                   <a href="#">
+                        <img src="http://img10.360buyimg.com/n7/jfs/t1720/256/513904188/195330/ce31e971/55d2cf3eNc2d117d0.jpg" alt="西域美农新疆特产五星和田红枣250g*2">
+                        <p class="productName">西域美农新疆特产五星和田红枣250g*2</p>
+                        <p class="productPrice">19.8元(5件99元)</p>
+                        <p class="productFrom"><span>京东商城</span><span>|</span><span>10-22 13:28</span></p>
+                   </a>
+               </li>
+           </ul>
+           
+            
+        </div>
+        <div class="index_footer">
+            <div class="footer_center clearfix">
+                <div class="l1"><p>登录</p></div>
+                <div class="l2"><p>注册</p></div>
+                <div class="l3"><p> <i></i> 返回顶部</p></div>
+            </div>
+            <div class="footer_bottom">
+                <a href="#">手机APP下载</a><span>慢慢买手机版</span><span>--</span><span>掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+   <script type="text/html" id="list">
+    {{each result v i}}
+    <li>
+        <a href="discount.html?id={{v.productId}}">
+                {{#v.productImg}}
+                <p class="productName hidden-word-2">{{v.productName}}</p>
+                <p class="productPrice hidden-word-1">{{v.productPrice}}</p>
+                <p class="productFrom"><span>{{v.productFrom}}</span><span>|</span><span>{{v.productTime}}</span></p>
+        </a>
+    </li>
+    {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/jquery.lazyload.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/inlanddiscount.js"></script>
+</body>
+</html>

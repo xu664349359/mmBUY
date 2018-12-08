@@ -1,0 +1,241 @@
+@import 'normalize.less';
+@import 'base.less';
+    @desin:750;
+    @base:@desin/10;
+    html,body{
+        // background-color: #fff;
+    }
+    .money_content{
+        background-color: #f1f1f1;
+        padding-top: 100rem/@base;
+        // height:4000px;
+        overflow: hidden;
+    }
+.header{
+    width: 100%;
+    height: 100rem/@base;
+    background-color: #ff841d;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    text-align: center; 
+    line-height: 100rem/@base;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 40rem/@base;
+        // p{
+        //     float: left;
+        //     text-align: center;
+            
+            
+            
+        //     margin-left:50%;
+        //     transform: translateX(-50%);
+            
+        // }
+        a{
+            display: block;
+            width: 68rem/@base;
+            height: 68rem/@base; 
+                // margin-right: 10rem/@base;
+                // margin-top: 15rem/@base;
+                position: absolute;
+                top: 15rem/@base;
+                right:10rem/@base;
+        }
+        .header_right{
+            width: 68rem/@base;
+            height: 68rem/@base;
+            
+            background: url(../images/header_app.png) center no-repeat;
+            background-size: contain;
+            
+        }
+    }
+.index_footer{
+
+    .footer_center{
+        // border-top: 2rem/@base solid #ccc;
+        border-bottom: 2rem/@base solid #ccc;
+        background-color: #efefef;
+        
+        
+        .l1,.l2{
+        width: 30%;
+        float: left;
+        height: 65rem/@base;
+        text-align: center;
+        font-size: 30rem/@base;
+        border-top: 2rem/@base solid #ccc;
+            p{
+                line-height: 65rem/@base;
+            }
+        }
+        .l3{
+            border-top: 2rem/@base solid #ccc;
+            float: left;
+            width: 40%;
+        float: left;
+        height: 65rem/@base;
+        text-align: center;
+        font-size: 30rem/@base;
+            p{
+                line-height: 65rem/@base;
+                vertical-align: middle;
+                i{
+
+                    display: inline-block;
+                    background: url(../images/top.jpg) center no-repeat;
+                    background-size: contain;
+                    width: 30rem/@base;
+                    height: 30rem/@base;
+                    vertical-align: middle;
+                    margin-bottom: 10rem/@base;
+                }
+            }
+        }
+    }
+    .footer_bottom{
+        text-align: center;
+        background-color: #efefef;
+        padding:35rem/@base 0;
+        a,span{
+            font-size: 25rem/@base;
+        }
+        a{
+            color: red;
+            margin-right: 2rem/@base;
+        }
+        span:nth-child(2){
+            color: #333;
+        }
+        span:nth-child(4){
+            color: #ccc;
+        }
+    }
+    p{
+        font-size: 20rem/@base;
+    }
+}
+.main{
+    height: 1000px;
+    .title{
+        padding-right: 90rem/@base;
+        background-color: #fff;
+        position: relative;
+        &>span{
+            position: absolute;
+            right: 45rem/@base;
+            top: 35rem/@base;
+            transform: translate(50%,-40%);
+            font-size: 60rem/@base;
+            font-weight: 100;
+        }
+        &>ul{
+            height: 75rem/@base;
+            border-right: 2rem/@base solid #ccc;
+            // border-bottom: 2rem/@base solid #ccc;
+            
+        & > li{
+                float: left;
+                width: 33.3%;
+                height: 100%;
+                text-align: center;
+                // font-size: 30rem/@base;
+                line-height: 75rem/@base;
+                      
+                ul{
+                    position: absolute;
+                    top: 80rem/@base;
+                    left: 0;
+                    background-color: #fff;
+                    width: 100%;
+                    display: none;
+                    li{
+                        height: 75rem/@base;
+                        border-bottom: 2rem/@base solid #ccc;
+                        text-align: left;
+                        text-indent: 1em;
+                        font-size: 30rem/@base;
+                        span{
+                            float: right;
+                            line-height: 75rem/@base;
+                            margin-right:20rem/@base;
+                            font-size: 20rem/@base;
+                            font-weight: 100;
+                            color: #ff841d;
+                            display: none;
+                        }
+                    }
+                    li:hover{
+                        background-color: #f1f1f1;
+                    }
+                    li.current span{
+                        display: block;
+                    }
+
+                }
+                ul.current{
+                    display: block;
+                }
+                a{
+                    font-size: 30rem/@base;
+                   
+                }
+                span{
+                    font-size: 30rem/@base !important;
+                    margin-left: 10rem/@base;
+                    // font-weight: 100;
+                    }
+            }
+        }
+      
+    }
+    .content{
+        ul{
+            margin: 20rem/@base 15rem/@base;
+            // background-color: #fff;
+            // height: 20px;
+            li{
+                width: 48%;
+                float: left;
+                background-color: #fff;
+                margin-bottom: 20rem/@base; 
+                img{
+                    width: 100%;
+                }
+                .des{
+                    font-size: 25rem/@base;
+                    // text-indent: 1em;
+                    // overflow: hidden;
+                    // width: 100%;
+                    padding: 0 10rem/@base;
+                }
+                .price{
+                    height: 60rem/@base;
+                    padding: 10rem/@base;
+                    span{
+                        font-size: 35rem/@base;
+                        color: #f74b07;
+                        line-height: 60rem/@base;
+                    }
+                    a{
+                        padding: 15rem/@base 20rem/@base;
+                        background-color: #ff9501;
+                        // display: block;
+                        font-size: 25rem/@base;
+                        border-radius: 7rem/@base;
+                        color: #ffffff;
+                        float: right;
+                    }
+                }
+                
+            }
+            li:nth-child(2n-1){
+                margin-right: 4%;
+            }
+            
+        }
+    }
+}

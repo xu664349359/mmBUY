@@ -1,0 +1,187 @@
+@import 'common2';
+
+.discount_content{
+    padding: 30rem/@base 20rem/@base;
+    overflow: hidden;
+    .content_top{
+        h3{
+            font-size: 35rem/@base;
+            line-height: 60rem/@base;
+        }
+        .small_title{
+            font-size: 20rem/@base;
+            color: #969196;
+            line-height: 80rem/@base;
+            span{
+                margin-right:10rem/@base;
+            }
+        }
+        .content-description{
+            margin-bottom: 10rem/@base;
+            div:first-child{
+                float: left;
+                width: 60% ;
+            }
+            div:last-child{
+                float: right;
+                width: 40%;
+            }
+            p{
+                font-size: 30rem/@base;
+                color: #504841;
+                line-height: 50rem/@base;
+                // float: left;
+            }
+            img{
+                width: 300rem/@base;
+                height: 300rem/@base;
+                // float: right;
+            }
+        }
+        .productInfo1{
+            line-height: 50rem/@base;
+            font-size: 30rem/@base;
+            color: #504841;
+            margin-bottom: 10rem/@base;
+        }
+    }
+    ul{
+        width: 280rem/@base;
+        margin: 20rem/@base auto;
+        padding: 20rem/@base;
+        box-shadow: 0px 7rem/@base 10rem/@base 1rem/@base #ccc;
+
+        a{
+            display: block;
+            position: relative;
+            font-size: 25rem/@base;
+            line-height: 40rem/@base;
+            border-bottom:2rem/@base dashed #d8d8d8;
+            text-indent: 20rem/@base;
+            span{
+                text-align: left;
+                // position: relative;
+                strong{
+                    position: absolute;
+                    right: 20rem/@base;
+                    bottom: 0;
+                    color: #f8985c;
+                }
+            }
+        }
+    }
+    .goBuy{
+        padding: 20rem/@base;
+        // margin-bottom: 10rem/@base;
+        a{
+            display: block;
+            width: 100%;
+            height: 60rem/@base;
+            background-color: #ff9000;
+            text-align: center;
+            border-radius: 10rem/@base;
+            line-height: 60rem/@base;
+            color: #ffffff;
+            font-size: 25rem/@base;
+        }
+    }
+    .comment{
+        margin-top:10rem/@base;
+        .ui-border-t{
+            .tit{
+                line-height: 70rem/@base;
+                font-size: 30rem/@base;
+            }
+            .reply{
+                .form{
+                    position: relative;
+                  & > textarea{
+                        display: block;
+                        width: 100% !important;
+                        height: 220rem/@base;
+                        box-shadow: 0px 0px 3rem/@base 2rem/@base #ccc !important;
+                    }
+                    .ctrl{
+                        position: absolute;
+                        width: 100%;
+                        line-height: 75rem/@base;
+                        background-color: #fbfbfb;
+                        border-top:1rem/@base solid #ccc;
+                        bottom: 0;
+                        text-align: right;
+                        left: 0;
+                        input{
+                            background-color: #ff841d;
+                            border:2rem/@base solid #fd9741;
+                            // height: 100%;
+                            color: #ffffff;
+                            // width: 100%;
+                            padding: 20rem/@base 35rem/@base;
+                            font-size: 30rem/@base;
+
+                        }
+                    }
+                }
+            }
+            .list{
+                ul{
+                    width: 100%;
+                    box-shadow: none;
+                    li{
+                        // content: "";
+                        // display: block;
+                        // visibility: hidden;
+                        // height: 0;
+                        // line-height: 0;
+                        // clear: both;
+                        margin-bottom: 20rem/@base;
+                        .userimg{
+                            float: left;
+                            img{
+                                border-radius: 50%;
+                                width: 80rem/@base;
+                            }
+                        }
+                        .con{
+                            float: left;
+                            width: 600rem/@base;
+                            padding-left: 20rem/@base;
+                            box-sizing: border-box;
+                            .username{
+                                float: left;
+                                font-size: 25rem/@base;
+                                color: #8997b4;
+                                margin-bottom: 10rem/@base;
+                            }
+                            .time{
+                                float: right;
+                                font-size: 10rem/@base;
+                                color: #a59087;
+
+                            }
+                            .content{
+                                display: block;
+                                // height: 300rem/@base;
+                                img{
+                                    display: inline-block;
+                                    height: 30rem/@base;
+                                    width: 30rem/@base;
+                                }
+                                font-size: 30rem/@base;
+                                line-height: 50rem/@base;
+                            }
+                        }
+                    }
+                    li::after{
+                        content: "";
+                        display: block;
+                        visibility: hidden;
+                        height: 0;
+                        line-height: 0;
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+}

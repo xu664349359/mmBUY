@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <script src="./lib/flexible.js"></script>
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+</head>
+<body>
+    <div class="money_content">
+        <div class="header">
+            <p>省钱控-最优惠</p>
+            <a href="#" class="fr"> <div class="header_right "></div></a>
+        </div>
+        <div class="main">
+            <ul>
+                <li>
+                <a href="#">
+                    <div class="li_left">
+                    <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+
+                    </div>
+                    <div class="li_right fl">
+                        <p class="list_top">移动端凑单品：海天 鲜味 生抽 1.28L <span>10.9元</span></p>
+                        <div class="list_bottom">
+                            <p class="classify fl"><span>京东商城</span><span>|</span><span>10-25 14:10</span></p>
+                            <p class="num fr">1</p>
+                        </div>
+                    </div>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <div class="li_left">
+                    <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+
+                    </div>
+                    <div class="li_right fl">
+                        <p class="list_top">移动端凑单品：海天 鲜味 生抽 1.28L <span>10.9元</span></p>
+                        <div class="list_bottom">
+                            <p class="classify fl"><span>京东商城</span><span>|</span><span>10-25 14:10</span></p>
+                            <p class="num fr">1</p>
+                        </div>
+                    </div>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <div class="li_left">
+                    <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+
+                    </div>
+                    <div class="li_right fl">
+                        <p class="list_top">移动端凑单品：海天 鲜味 生抽 1.28L <span>10.9元</span></p>
+                        <div class="list_bottom">
+                            <p class="classify fl"><span>京东商城</span><span>|</span><span>10-25 14:10</span></p>
+                            <p class="num fr">1</p>
+                        </div>
+                    </div>
+                </a>
+                </li>
+            </ul>
+            <div class="product_footer clearfix">
+                <a href="#" class="last">上一页</a>
+                <select>
+                    <option value="1">1/4</option>
+                    <option value="2">2/4</option>
+                    <option value="3">3/4</option>
+                    <option value="4">4/4</option>
+                </select>
+                <a href="#" class="next">下一页</a>
+            </div>
+            <div class="index_footer">
+                <div class="footer_center clearfix">
+                    <div class="l1"><p>登录</p></div>
+                    <div class="l2"><p>注册</p></div>
+                    <div class="l3"><p> <i></i> 返回顶部</p></div>
+                </div>
+                <div class="footer_bottom">
+                    <a href="#">手机APP下载</a><span>慢慢买手机版</span><span>--</span><span>掌上比价平台</span>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="money">
+        {{each result v i}}
+        <li>
+            <a href="moneyproduct.html?id={{v.productId}}">
+                <div class="li_left">
+                    {{#v.productImgSm}}
+                </div>
+                <div class="li_right fl">
+                    <p class="list_top">{{#v.productName}}<span>{{v.productPinkage}}</span></p>
+                    <div class="list_bottom">
+                        <p class="classify fl"><span>{{#v.productFrom}}</span><span>|</span><span>{{#v.productTime}}</span></p>
+                        <p class="num fr">{{#v.productComCount}}</p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/moneyctrl.js"></script>
+</body>
+</html>

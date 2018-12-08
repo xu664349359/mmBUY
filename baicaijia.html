@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <script src="./lib/flexible.js"></script>
+    <link rel="stylesheet" href="./css/baicaijia.css">
+    <!-- <link rel="stylesheet" href="./css/animate.css"> -->
+</head>
+<body>
+    <div class="money_content">
+        <div class="header">
+            白菜价-淘宝内部券
+            <a href="#" class="fr"> <div class="header_right "></div></a>
+        </div>
+        <div class="main">
+            <div class="title">
+                <ul class="clearfix">
+                    <li class="current"><a href="#">热销</a></li>
+                    <li><a href="#">热销</a></li>
+                    <li><a href="#">热销</a></li>
+                    <li><a href="#">热销</a></li>
+                    <li><a href="#">热销</a></li>
+                    <li><a href="#">热销</a></li>
+                    <li><a href="#">热销</a></li>
+                </ul>
+            </div>
+            <ul>
+                <li class="clearfix">
+                    <div class="list_left fl">
+                        <img src="https://gd2.alicdn.com/imgextra/i4/2559357181/TB2eYawX43X61Bjy0FlXXaGtVXa_!!2559357181.jpg_400x400.jpg">
+                    </div>
+                    <div class="list_right fr">
+                        <p class="des"><span class="b">[包邮]</span>藏源鹿品牌原创设计【羊毛针织】中长大衣</p>
+                        <p class="price"><i>券后</i><em>¥</em>106.0<del>¥206</del></p>
+                        <div class="div">
+                            <div class="bar clearfix"><a href="http://shop.m.taobao.com/shop/coupon.htm?seller_id=2213057944&amp;activity_id=8cfb336284b5436b9f2c7c9343fa85f1" class="goquan" target="_blank"></a><i><em style="width:75%;"></em><span>75%</span></i><b>已领75117张</b></div>
+                        </div>
+                        <div class="Buy">
+                            <a href="http://shop.m.taobao.com/shop/coupon.htm?seller_id=2213057944&amp;activity_id=8cfb336284b5436b9f2c7c9343fa85f1" target="_blank">点此领10元优惠券</a>
+                            <a biz-itemid="539735809040" isconvert="1" href="https://item.taobao.com/item.htm?id=539735809040" target="_blank">下单链接</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="index_footer">
+            <div class="footer_center clearfix">
+                <div class="l1"><p>登录</p></div>
+                <div class="l2"><p>注册</p></div>
+                <div class="l3"><p> <i></i> 返回顶部</p></div>
+            </div>
+            <div class="footer_bottom">
+                <a href="#">手机APP下载</a><span>慢慢买手机版</span><span>--</span><span>掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="baicai_title">
+        {{each result v i}}
+        <li><a href="#" data-id="{{v.titleId}}" class="{{ i === 1 ? 'current':''}}" data-id="{{v.titleId}}">{{v.title}}</a></li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="list_content">
+        {{each result v i}}
+        <li class="clearfix">
+            <div class="list_left fl">
+                {{#v.productImg}}
+            </div>
+            <div class="list_right fr">
+                <p class="des">{{#v.productName}}</p>
+                <p class="price">{{#v.productPrice}}</p>
+                <div class="div">
+                    {{#v.productCouponRemain}}
+                </div>
+                <div class="Buy">
+                   {{#v.productCoupon}}
+                    {{#v.productHref}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/iscroll/iscroll.js"></script>
+    <script src="./js/baicaijia.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/discription.css">
+    <script src="./lib/flexible.js"></script>
+</head>
+<body>
+    <div class="mm_container">
+        <div class="header">
+            <div class="header_left fl"></div>
+           <a href="#" class="fr"> <div class="header_right "></div></a>
+        </div>
+        <div class="search">
+           <div class="search_contain">
+                <input type="text" placeholder="请输入你想比价的商品" class="fl">
+                <button class="fr">搜索</button>
+           </div>
+        </div>   
+        <div class="main">
+            <div class="banner">
+                <div class="title clearfix">
+                        <div class="title_left">
+                            <a href="index.html">首页</a> <span class=" fa fa-angle-right"></span><a href="javascript:history.go(-1);" class="cate">全部分类</a><span class="fa fa-angle-right"></span><a href="#" class="lay">电视</a><span class="fa fa-angle-right"></span>
+                        </div>
+                        <button>筛选</button>
+                </div>
+                <!-- <div class="content">
+                    <div class="top">
+                        <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+                        <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视" width="170">
+                    </div>
+                    <div class="bottom">
+                        <ul class="clearfix">
+                            <li><a href="#">比价购买</a></li>
+                            <li><a href="#">产品参数</a></li>
+                            <li><a href="#">评价(2322)</a></li>
+                        </ul>
+                        <div class="say">
+                            <p>*实际价格以各网列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="comments">
+                <div class="title">
+                    网友评论
+                </div>
+                <ul>
+                    <li>
+                        <p class="clearfix"><span class="fl">s**r</span><span class="fr">2016/5/17</span></p>
+                        <p style="text-align: right">购买自：京东商场</p>
+                        <p>"外观：精工细作，颜值再度提高
+                            作为一台55寸的大电视，乐视X55
+                            正面看起来非常大气，配合Letv独
+                            有的造型独特的云底座，整体视觉观感
+                            出色。会发光的Letv标识被放置在了机器
+                            的左下角，标识右侧，安排有一个圆形的遥
+                            控器信号接收区域。乐视X55的边框处理相当
+                            讲究，采用了时下智能手机产品上常见的倒角工
+                            艺，配合表面的金属拉丝，展现出产品细节上的用心
+                            。同时，乐视X55的正面屏幕边框也非常窄，正面边框
+                            与屏幕内部黑边的宽度总和近似等于一部普通智能手机的
+                            厚度。在成为会员之前，用户对所有高清视频拥有6分钟的
+                            试看时间。应用扩展方面，EUI5延续了超级电视一贯的风格
+                            ，对于一台安卓系统的设备来说，系统中自带电视管家等应用可
+                            以进行内存清理等操作，方便实用。总结：超级电视的完善之作智
+                            能电视发展的日渐成熟，让智能电视产品本身越来越难以出现具有突破
+                            性的亮点，即使是有了超级之名的乐视TV，在实际的使用上，也并没什么
+                            真正让人眼前一亮的功能。此时乐视X55出现的意义，我们觉得是更像是对
+                            回归实用的遥控器，配合软件上功能全面的EUI系统，乐视X55称的上市超级电视的
+                            完善之作。加油吧，京东"</p>
+                    </li>
+                </ul>
+                <div class="comments-footer">
+                    <button>查看更多评价</button>
+                </div>
+            </div>
+        </div>
+       <div class="index_footer">
+            
+            <div class="footer_center clearfix">
+                <div class="l1"><p>登录</p></div>
+                <div class="l2"><p>注册</p></div>
+                <div class="l3"><p> <i></i> 返回顶部</p></div>
+            </div>
+            <div class="footer_bottom">
+                <a href="#">手机APP下载</a><span>慢慢买手机版</span><span>--</span><span>掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+   <script type="text/html" id="description">
+    <div class="content">
+        <div class="top">
+            <p>{{#result[0].productName}}</p>
+            {{#result[0].productImg}}
+        </div>
+        <div class="bottom">
+            <ul class="clearfix">
+                <li><a href="#">比价购买</a></li>
+                <li><a href="#">产品参数</a></li>
+                <li><a href="#">评价(2322)</a></li>
+            </ul>
+            {{#result[0].bjShop}}
+            <div class="say">
+                <p>*实际价格以各网列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+            </div>
+        </div>
+    </div>
+    </script>
+    <script type="text/html" id="comments">
+        {{each result v i}}
+        <li>
+            <p class="clearfix"><span class="fl">{{v.comName}}</span><span class="fr">{{v.comTime}}</span></p>
+            <p style="text-align: right">{{v.comFrom}}</p>
+            <p>{{v.comContent}}</p>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="title">
+        <a href="index.html">首页</a> <span class=" fa fa-angle-right"></span><a href="search.html">全部分类</a><span class="fa fa-angle-right"></span><a href="javascript:history.back;">电视</a><span class="fa fa-angle-right"></span>
+    </script>
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/description.js"></script>
+</body>
+</html>

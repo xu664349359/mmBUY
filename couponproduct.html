@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <script src="./lib/flexible.js"></script>
+    <link rel="stylesheet" href="./css/couponproduct.css">
+</head>
+<body>
+    <div class="money_content">
+        <div class="header">
+            优惠券
+            <a href="#"> <div class="header_right "></div></a>
+        </div>
+        <div class="main">
+           <p>--点餐前出示手机中的优惠券，即可享受优惠--</p>
+           <ul>
+               <li class="clearfix">
+                    <img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=" 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券">
+                    <div class="list_right">
+                        <p class="des">C27  两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>
+                        <p class="price">￥ 28</p>
+                        <p class="time">有效期至10月31日</p>
+                    </div>
+               </li>
+           </ul>
+        </div>
+        <div class="index_footer">
+            <div class="footer_center clearfix">
+                <div class="l1"><p>登录</p></div>
+                <div class="l2"><p>注册</p></div>
+                <div class="l3"><p> <i></i> 返回顶部</p></div>
+            </div>
+            <div class="footer_bottom">
+                <a href="#">手机APP下载</a><span>慢慢买手机版</span><span>--</span><span>掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="coupon_list">
+        {{each result v i}}
+        <li class="clearfix">
+           {{#v.couponProductImg}}
+            <div class="list_right">
+                <p class="des">{{v.couponProductName}}</p>
+                <p class="price">{{v.couponProductPrice}}</p>
+                <p class="time">{{v.couponProductTime}}</p>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/couponproduct.js"></script>
+</body>
+</html>
